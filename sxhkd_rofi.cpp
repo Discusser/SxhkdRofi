@@ -35,7 +35,7 @@ int main(int argc, char *argv[]) {
 
 void parse_command_line_arguments(int argc, char *argv[]) {
   GError *error = nullptr;
-  GOptionContext *context = g_option_context_new("test");
+  GOptionContext *context = g_option_context_new(nullptr);
   g_option_context_add_main_entries(context, command_line_arguments, nullptr);
 
   g_option_context_set_help_enabled(context, true);
