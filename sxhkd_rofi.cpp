@@ -16,7 +16,7 @@ GOptionEntry command_line_arguments[] = {
      "The path to the sxhkdrc file containing the keybindings. Default: $HOME/.config/sxhkd/sxhkdrc",
      "/path/to/sxhkdrc"},
     {"align-entries", 'a', G_OPTION_FLAG_NONE, G_OPTION_ARG_NONE, &align_entries,
-     "Whether or not entries should be aligned on the semicolon (with right padding). Default: true", "true"},
+     "Whether or not entries should be aligned on the semicolon (with right padding). Default: false", "true"},
     nullptr,
 };
 
