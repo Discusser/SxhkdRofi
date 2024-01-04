@@ -11,7 +11,8 @@ You can compile this yourself using `meson`.
 - [rofi](https://github.com/davatorium/rofi)
 - meson
 - libglib2.0
-You can install these on Debian base systems with `apt`:
+
+You can install these on Debian based systems with `apt`:
 ```bash
 apt install rofi meson libglib2.0-dev
 ``` 
