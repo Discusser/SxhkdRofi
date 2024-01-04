@@ -13,7 +13,8 @@ gboolean align_entries = false;
 
 GOptionEntry command_line_arguments[] = {
     {"file", 'f', G_OPTION_FLAG_NONE, G_OPTION_ARG_FILENAME, &sxhkd_config_path,
-     "The path to the sxhkdrc file containing the keybindings. Default: $HOME/.config/sxhkd/sxhkdrc",
+     "The path to the sxhkdrc file containing the keybindings. Default: $HOME/.config/sxhkd/sxhkdrc or "
+     "$XDG_CONFIG_HOME/sxhkd/sxhkdrc",
      "/path/to/sxhkdrc"},
     {"align-entries", 'a', G_OPTION_FLAG_NONE, G_OPTION_ARG_NONE, &align_entries,
      "Whether or not entries should be aligned on the semicolon (with right padding). Default: false", "true"},
@@ -67,7 +68,7 @@ void parse_command_line_arguments(int argc, char *argv[]) {
   if (sxhkd_config_path == nullptr) {
     sxhkd_config_path = string_to_char_pointer(search_for_existing_file({
         "$HOME/.config/sxhkd/sxhkdrc",
-        "$XDG_CONFIG_HOME/.config/sxhkd/sxhkdrc",
+        "$XDG_CONFIG_HOME/sxhkd/sxhkdrc",
     }));
   }
 }
