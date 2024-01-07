@@ -30,7 +30,7 @@ rofi -modi 'sxhkd:SxhkdRofi' -show sxhkd
 ```
 I recommend the following command to make it a bit prettier. You can change the value of `theme` and `theme-str` to your liking, but that's just how I've configured it.
 ```bash
-rofi -modi "sxhkd:SxhkdRofi -a" -show sxhkd -theme $HOME/.config/rofi/launchers/type-1/style-4 -theme-str 'window { width: 50%; }'
+rofi -modi "sxhkd:SxhkdRofi -a" -show sxhkd -theme $HOME/.config/rofi/applets/type-1/style-1.rasi -theme-str 'window { width: 50%; height: 50%; }'
 ```
 The command above creates a menu that looks something like this:
 ![image](https://github.com/Discusser/SxhkdRofi/assets/47938380/0530712f-f486-4c19-b60c-d4e76edac6b4)
